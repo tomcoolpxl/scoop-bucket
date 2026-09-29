@@ -1,5 +1,5 @@
 {
-    "version": "1.1.5",
+    "version": "1.2.0",
     "description": "Cool Again Shell: a Bash-language shell for Windows, with its Unix tools built in",
     "homepage": "https://github.com/tomcoolpxl/cash",
     "license": {
@@ -8,6 +8,7 @@
     },
     "notes": [
         "Windows Terminal lists a \"cash\" profile (restart Terminal if it does not show).",
+        "Without a ~/.bashrc or ~/.cashrc, the first install wrote a starter ~/.bashrc (cash --init-rc).",
         "For the file icons of `ls --icons`, a Nerd Font (per-user, no admin), then refresh the profile:",
         "    scoop bucket add nerd-fonts",
         "    scoop install nerd-fonts/CascadiaMono-NF",
@@ -22,8 +23,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tomcoolpxl/cash/releases/download/v1.1.5/cash-v1.1.5-x86_64-pc-windows-msvc.zip",
-            "hash": "478bec489c85ffdf1b375bea5295a59f21aaa9d0d46764bc68fc45c497844225"
+            "url": "https://github.com/tomcoolpxl/cash/releases/download/v1.2.0/cash-v1.2.0-x86_64-pc-windows-msvc.zip",
+            "hash": "5fb8249907caace25814cf6728c00e4bff140049eedad1eb5f0792e52cecde51"
         }
     },
     "bin": "cash.exe",
@@ -31,7 +32,8 @@
     "post_install": [
         "$cash = \"$(Split-Path $dir)\\current\\cash.exe\"",
         "& $cash --terminal-profile | Out-Null",
-        "if (Test-Path \"$persist_dir\\bin\\.cash-links\") { & $cash --link-tools | Out-Null }"
+        "if (Test-Path \"$persist_dir\\bin\\.cash-links\") { & $cash --link-tools | Out-Null }",
+        "& $cash --init-rc --once"
     ],
     "pre_uninstall": [
         "if ($cmd -eq 'uninstall') {",
