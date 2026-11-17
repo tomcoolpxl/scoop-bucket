@@ -13,11 +13,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/tomcoolpxl/edifier-mr-volume/releases/download/v1.1.0/edifier-mr-volume-v1.1.0-win-x64.zip",
-            "hash": "465378bd12ec04e8592220643a9ebdd72d886116f9a137bc8bb4deb091a5f3ac"
+            "hash": "951641ca4bb974f0d51c0e0ff60b09046489ccc2fa246b35e55bf85ae6bf201e"
         },
         "arm64": {
             "url": "https://github.com/tomcoolpxl/edifier-mr-volume/releases/download/v1.1.0/edifier-mr-volume-v1.1.0-win-arm64.zip",
-            "hash": "f198f86a4eab9fed0ec1fca68c0c8deacf7090dc30e1198cda045cddf14060db"
+            "hash": "90f575cc7a8a63f2220ae80617844ca742ff8c1244c53b533cd0e158caf4211b"
         }
     },
     "shortcuts": [
